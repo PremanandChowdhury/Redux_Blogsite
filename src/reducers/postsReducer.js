@@ -1,6 +1,10 @@
-const postsReducer = () => {
-  return 'Some Text'
-}
+export default (state = [], action) => {
+  switch (action.type) {
+    case 'FETCH_POSTS':
+      return action.payload
+      break
 
-export default postsReducer
- 
+    default:
+      return state
+  }
+}
